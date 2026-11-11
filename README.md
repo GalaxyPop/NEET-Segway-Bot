@@ -1,15 +1,15 @@
 # src/ structure overview
 -------------------------
-1. main: Main control loop - setup motors and encoders, setup IMU. Loop over scanning sensors, updating current position, and calling trajectory function.
-2. trajectories: 4 trajectories (STILL, LEFT, RIGHT, CIRCLE). Defines function with chosen trajectory, which then calculates the desired position xd.
-3. drive: Defines 2 motors and 2 encoders, along with LQR and PID updating functions.
-4. config: Defines constant values that we may change over time, like kp, ki, kd.
+    1. main: Main control loop - setup motors and encoders, setup IMU. Loop over scanning sensors, updating current position, and calling trajectory function.
+    2. trajectories: 4 trajectories (STILL, LEFT, RIGHT, CIRCLE). Defines function with chosen trajectory, which then calculates the desired position xd.
+    3. drive: Defines 2 motors and 2 encoders, along with LQR and PID updating functions.
+    4. config: Defines constant values that we may change over time, like kp, ki, kd.
 
 
 # test/ structure overview
 --------------------------
-1. motor_test: Tests that motors are working properly.
-2. encoder_test: Tests that encoders are working properly.
+    1. motor_test: Tests that motors are working properly.
+    2. encoder_test: Tests that encoders are working properly.
 
 
 # venv/ and requirements.txt
@@ -43,10 +43,12 @@ When adding a new library:
 
 # coding conventions
 --------------------
-| File names     | snake_case.py |
-| Function names | snake_case() |
-| Class names    | PascalCase |
-| Constants      | UPPER_CASE |
-| Indentation    | 4 spaces |
-| Imports        | At the top of the file |
+| Convention     | Recommendation                     |
+| -------------- | ---------------------------------- |
+| File names     | `snake_case.py`                    |
+| Function names | `snake_case()`                     |
+| Class names    | `PascalCase`                       |
+| Constants      | `UPPER_CASE`                       |
+| Indentation    | 4 spaces                           |
+| Imports        | At the top of the file             |
 | Documentation  | Docstrings for important functions |

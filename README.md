@@ -6,10 +6,23 @@
     4. config: Defines constant values that we may change over time, like kp, ki, kd.
 
 
+# lib/ structure overview
+-------------------------
+Here we have sensor-agnostic libraries that can be used to abstract away implementation.
+Instead of having IMU code, motor code, PID code, etc. in src, we use libraries with
+classes to take care of that functionality.
+
+
+# drivers/ structure overview
+-----------------------------
+Includes sensor-specific drivers that can integrate with lib files.
+
+
 # test/ structure overview
 --------------------------
-    1. motor_test: Tests that motors are working properly.
-    2. encoder_test: Tests that encoders are working properly.
+    1. motor_check: Tests that motors are working properly.
+    2. encoder_check: Tests that encoders are working properly.
+    3. imu_check: Tests that the imu is working properly.
 
 
 # venv/ and requirements.txt
